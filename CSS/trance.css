@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=MuseoModerno:wght@900&family=Press+Start+2P&display=swap');
+*{
+    margin:0;
+    padding:0;
+}
+
+header{
+    height:100vh;
+    width: 100%;
+     background: #000;
+    display: flex;
+    justify-content: center;
+   
+    
+}
+
+
+.nav{
+    height:80px;
+    width: 80px;
+    position: fixed;
+    right: 20px;
+    top:20px;
+    animation:nav 2s cubic-bezier(.26,.64,.83,1.03) forwards;
+    background: #000;
+    transition: .6s;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+
+.nav button{
+    height:80px;
+    width: 80px;
+    border:none;
+    background-image: url(../GIF/alexa.gif);
+    background-size: cover;
+    background-position: center;
+    position: fixed;
+    right: 0px;
+    top:0px;
+    border-radius: 50%;
+    
+}
+
+.nav button:hover{
+    cursor: pointer;
+}
+
+
+.nav ul{
+    list-style:none;
+    height: 300px;
+    width: 200px;
+    border-radius:30px;
+    text-align: center;
+    margin-top:100px;
+    margin-right:150px;
+    opacity: 0;
+}
+
+.nav ul li{
+    
+    transition: transform .5s;
+    margin-top:10%;
+}
+
+.nav ul li:hover{
+    transform:scale(1.2);
+   
+}
+
+.nav ul li a{
+    text-decoration: none;
+    font-family: 'MuseoModerno', cursive;
+    font-size: 23px;
+}
+
+
+.logoCircle{
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:logo 2s cubic-bezier(.26,.64,.83,1.03) forwards;
+}
+
+.logoText{
+    display: inline;
+    font-family: 'MuseoModerno', cursive;
+    font-size:40px;
+}
+
+hr{
+    
+    height: 12px;
+    border-radius: 5px;
+   margin:0 auto;
+    margin-top:-16px;
+   animation: hr 3s ease-out forwards;
+}
+
+.section1{
+    height: auto;
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.section1 img{
+    width: 300px;
+    height: auto;
+    
+}
+
+.section1 div{
+    width: 700px;
+    height: auto;
+    
+    margin:50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:15px;
+    
+}
+
+.section1 div h2{
+   
+   font-family: 'MuseoModerno', cursive;
+    font-size:23px;
+}
+
+.section1 div p{
+   
+    text-align: justify;
+    font-family: 'MuseoModerno', cursive;
+    font-size:18px;
+}
+
+
+/*///////////////////////////////////////////////ANIMACIONES///////////////////////////////////////////////////*/
+@keyframes logo{
+    0%{
+        transform:translateY(-80vh)
+    }
+    100%{
+       transform:translateY(27vh)
+    }
+    
+}
+@keyframes nav{
+   
+        0%{
+             transform: translateX(20vw);
+            
+        }
+       
+        30%{
+            transform: translateX(-15vw) rotate(-90deg);
+            
+        }
+        100%{
+            transform:translateX(0vw);
+        }
+       
+}
+@keyframes hr{
+    0%{
+        opacity: 0;
+    }
+    
+    100%{
+      opacity: 1;  
+    }
+}
+
+
+
