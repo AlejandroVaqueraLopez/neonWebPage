@@ -47,6 +47,9 @@ header{
     cursor: pointer;
 }
 
+.nav button:focus{
+   outline: none;
+}
 
 .nav ul{
     list-style:none;
