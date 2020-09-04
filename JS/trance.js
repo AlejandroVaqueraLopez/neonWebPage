@@ -4,7 +4,7 @@ var cont2=254;
 var cont3=125;
 
 //function that act as chronometer for te rgb changes
-var cambios =setInterval(aumento,200);
+var cambios =setInterval(aumento,100);
 //this is the counters to make the 3 rgb(cont1,cont2,cont3) numbers, that are always changing
 function aumento(){
     if(cont1==254){
@@ -24,28 +24,28 @@ function aumento(){
     cont3++;
    
     
-    document.getElementsByClassName('rgbColor')[0].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem1
-    document.getElementsByClassName('rgbColor')[1].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem2
-   document.getElementsByClassName('rgbColor')[2].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem3
-    document.getElementsByClassName('rgbColor')[3].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem4
+    document.querySelectorAll('#ul li a')[0].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem1
+    document.querySelectorAll('#ul li a')[1].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem2
+    document.querySelectorAll('#ul li a')[2].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem3
+    document.querySelectorAll('#ul li a')[3].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//menuitem4*/
     
     
     //then is just to assign the 3 counters to the rgb styles in borders, all this function works every .2 seconds WOW!!
     
-    document.getElementsByClassName('rgbBorder')[0].style.border = '8px solid rgb(' + cont1 + ',' + cont2+ ',' + cont3 + ')';//nav
-   document.getElementsByClassName('rgbBorder')[1].style.border = '13px solid rgb(' + cont1 + ',' + cont2 + ',' + cont3 + ')';//logo circle
-    document.getElementsByClassName('rgbColor')[4].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';   //logoText
+    document.querySelector('nav').style.border = '8px solid rgb(' + cont1 + ',' + cont2+ ',' + cont3 + ')';//nav
+   document.querySelector('.logoCircle').style.border = '13px solid rgb(' + cont1 + ',' + cont2 + ',' + cont3 + ')';//logo circle
+    document.querySelector('.logoText').style.color = 'rgb('+cont1+','+cont2+','+cont3+')';   //logoText
     
     //and these <hr> labels alco can change color with rgb system
-   document.getElementsByClassName('rgbBackground')[0].style.backgroundColor = 'rgb('+cont1+','+cont2+','+cont3+')';//hr background
-    document.getElementById('hr1').style.width = cont3+'px';
+   document.querySelectorAll('hr')[0].style.backgroundColor = 'rgb('+cont1+','+cont2+','+cont3+')';//hr background
+    document.querySelectorAll('hr')[0].style.width = cont3+'px';
     
-     document.getElementsByClassName('rgbBackground')[1].style.backgroundColor = 'rgb('+cont1+','+cont2+','+cont3+')';//hr2 background
-    document.getElementById('hr2').style.width = cont3+'px';
+    document.querySelector('.section1 div').style.border = '8px solid rgb(' + cont1 + ',' + cont2+ ',' + cont3 + ')';//section1 div 
+     document.querySelector('.section1 div h2').style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//section1 div h2
+    document.querySelector('.section1 div p').style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//section1 div p
     
-    document.getElementsByClassName('rgbBorder')[2].style.border = '8px solid rgb(' + cont1 + ',' + cont2+ ',' + cont3 + ')';//section1 div 
-     document.getElementsByClassName('rgbColor')[5].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//section1 div h2
-    document.getElementsByClassName('rgbColor')[6].style.color = 'rgb('+cont1+','+cont2+','+cont3+')';//section1 div p
+     document.querySelectorAll('hr')[1].style.backgroundColor = 'rgb('+cont1+','+cont2+','+cont3+')';//hr2 background
+    document.querySelectorAll('hr')[1].style.width = cont3+'px';
     
 }
     
